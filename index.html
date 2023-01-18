@@ -5,42 +5,48 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Encriptador</title>
+        <title>ENCRIPTADOR</title>
+        <link rel="icon" href="img/candado.ico">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
-    <body id="body" onload="iniciar();">
-        <div>
+    <body id="body" onload="iniciar();"><!---->
+        <canvas id="canvas"></canvas>
+        <div id="pagina">
             <!--h1 es el logo-->
-            <h1><a href="https://www.youtube.com/@aldomagno5789">a</a></a></h1>
+            <div class="logo">
+                <h1><a href="https://www.aluracursos.com/">a</a></h1>
+            </div>
             <!--texto a encriptar-->
-            <div id="ingresarTexto">
+            <div id="secText">
                 <label for="ingTextAqui"> &#9888; Ingrese solo letras minusculas y sin acentos</label>
-                <textarea  type="text" id="ingTextAqui" placeholder="Ingrese texto aquí"></textarea>
-                <button id="borrar" >&#128473;</button>
-                <button id="reparar">&#128736; REPARAR TEXTO</button>
+                <span id="borrar" class="material-symbols-outlined">delete</span>
+                <textarea spellcheck="false"  type="text" id="ingTextAqui" placeholder="Ingrese texto aquí"></textarea>
+                <button id="reparar"><span class="material-symbols-outlined">build</span> Reparar texto</button>
+            </div>
+            <!--botones de encriptado-->
+            <div class="botones">
+                <button id="btnEncriptar" class="boton">ENCRIPTAR</button>
+                <button id="btnDesencriptar" class="boton">DESENCRIPTAR</button>
             </div>
             <!--mensaje secreto-->
             <div class="mensaje">
                 <img id="imagen" src="img/candado.png" alt="imagen buscando un texto">
-                <textarea  readonly id="msg" class="crypto"  placeholder="No se encontro ningún mensaje"></textarea>
+                <textarea  readonly id="msg" placeholder="No se encontro ningún mensaje"></textarea>
                 <!--boton de copiar-->
                 <button id="btnCopy" class="copiar">Copiar</button>
             </div>
-            <!--botones de encriptado-->
-            <div class="botones">
-                <button id="btnEncriptar" class="boton">Encriptar</button>
-                <button id="btnDesencriptar" class="boton">Desencriptar</button>
-            </div>
+            <footer class="foot">
+                <!--datos del creador-->
+                <a href="https://www.linkedin.com/in/ihtram-magno/"><img src="img/linkedin-icon.png" alt="linkedin"></a>
+                <a href="https://www.youtube.com/@aldomagno5789"><img  id="i" src="img/yt-icon.png" alt="youtube"></a>
+                <a href="https://github.com/Ihtram-Magno"><img src="img/github-icon.png" alt="github"></a>
+                <p>&copy; IHTRAM-M<span>A</span>GNO 2023</p>
+            </footer>
         </div>
         <script type="text/javascript" src="script.js"></script>
         <script type="text/javascript" src="script2.js"></script>
-        <canvas id="canvas" width="2000" height="2000"></canvas>
-        <footer class="pie">
-            <!--datos del creador-->
-            <a href="https://www.linkedin.com/in/ihtram-magno/">&#9812; VISITA MI LINKEDIN IHTRAM-MAGNO &#9812;</a><br>
-            <a href="https://github.com/Ihtram-Magno">&#9812; VISITA MI GITHUB IHTRAM-MAGNO &#9812;</a>
-        </footer>
     </body>
 </html>

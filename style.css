@@ -1,14 +1,26 @@
-/*AQUI INICIA MI BODY*/
-#body {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 40px;
-    position: relative;
-    padding: 0; 
+*{
     margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    overflow-x: hidden
+    padding: 0;
+    font-family: 'DotGothic16', sans-serif;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    text-align: center;
+    color: rgba(190, 255, 190, .4);
+}
+
+::selection{
+    background-color:rgb(0, 230, 150) ;
+    color: #000;
+
+}
+
+textarea{
+    resize: none;
 }
 
 textarea:focus-visible {
@@ -20,177 +32,218 @@ button:focus-visible{
 }
 
 ::-webkit-scrollbar{
-    width: .4vw;
+    width: 7px;
     background-color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #000;
-    border-radius: 2px;
-    border: 1px solid #0f0;
+    border-radius: 20px;
+    border: 2px solid #0f0;
 }
 
-/*ESTE ES MI LOGO*/
-h1 a{
-    color: #0f0;
-    font-size: 2em;
-    position: absolute;
-    margin: .5em;
-    padding: .15em .5em .45em .5em;
-    border-radius:50px;
-    background-color: rgba(0, 0, 0, .8);
-    box-shadow: 0 0 20px 0px rgb(0, 255, 0);
-    text-decoration:none;
+/*AQUI INICIA MI BODY*/
+#body {
+    box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 3vw;
+    background-color: #000;
 }
 
-h1 a:hover{
-    box-shadow: 0 0 20px 2px rgb(0, 255, 0);
-    scale: 1.1;
-    margin: .5em;
+#pagina{
+    background:none;
+    min-height: 100vh;
+    height: 100%;
+    width: 98vw;
+    margin: 0 .8vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+
+    grid-template-areas:"logo logo logo mostrar mostrar"
+                        "logo logo logo mostrar mostrar"
+                        "logo logo logo mostrar mostrar"
+                        "logo logo logo mostrar mostrar"
+                        "ingresar ingresar ingresar mostrar mostrar"
+                        "ingresar ingresar ingresar mostrar mostrar"
+                        "ingresar ingresar ingresar mostrar mostrar"
+                        "ingresar ingresar ingresar mostrar mostrar"
+                        "btn btn btn mostrar mostrar"
+                        "btn btn btn mostrar mostrar"
+                        "footer footer footer mostrar mostrar";
 }
 
 /*ESTE ES MI FONDO*/
 #canvas {
-    width: 100vw;
-    height: 99.6vh;
-    padding: 0px;
-    margin: 0px;
-}
-/*ESTE ES INGRESAR TEXTO*/
-
-#ingresarTexto{
     position: absolute;
-    width: 50vw;
-    margin: 40vh 5vw 0 5vw;
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: column;
+    background-color: #0f0;
+    border: none;
+    border-radius: 0px;
+    width: 99vw;
+    height: 100vh;
+    margin: 0 .5vw;
+    padding: 0%;
 }
 
-#ingresarTexto label{
-    box-sizing: border-box;
-    background-color: #111;
-    color: #fc0;
-    border: 2px solid #444;
-    font-size: .5em;
-    border-radius: 90px;
-    margin: 1vh 5vw;
-    padding: 2px 5px;
-    font-size: .3em;
-    text-align: center;
-}
+/*ESTE ES MI LOGO*/
 
-#ingTextAqui{
-    font-family: 'DotGothic16', sans-serif;
-    background-color:rgba(0, 0, 0,.7);
-    color: #00ff00;
-    border: 1px solid #0f0;
+.logo{
+    grid-area: logo;
+    height: 100%;
     width: 100%;
-    font-size: .7em;
-    box-sizing: border-box;
-    padding: .5em;
-    resize: vertical;
-    text-align: center;
-    height: 20vh;
 }
 
-::placeholder {
-    text-align: center;
-    box-sizing: border-box;
+.logo h1 a{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 2em;
+    padding: .15em .54em .45em .54em;
+    text-decoration:none;
+    border-radius:180px;
+    border: 3px solid #afa;
+    box-shadow: none;
+    animation: logo 4s linear infinite;
+}
+
+@keyframes logo{
+    0%{
+        margin: 5% 0 0 3%;
+        color: #afa;
+        text-shadow: 0px 0px 12px #00ff00, 0px 0px 8px #00ff00, 0px 0px 5px #00ff00;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 10px #00ff00, inset 0px 0px 8px #00ff00;
+    }
+    
+    50%{
+        margin: 6% 0 0 3%;
+        color: #5f5;
+        text-shadow: none;
+        box-shadow: none;
+        border: 3px solid #5f5;
+    }
+    
+    100%{
+        margin: 5% 0 0 3%;
+        color: #afa;
+        text-shadow: 0px 0px 12px #00ff00, 0px 0px 8px #00ff00, 0px 0px 5px #00ff00;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 10px #00ff00, inset 0px 0px 8px #00ff00;
+    }
 }
 
 /*BOTON DE BORRAR*/
 
 #borrar{
     box-sizing: border-box;
+    background: #000;
     position: absolute;
     color: #00ff00;
-    scale: 1.5;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 5.5vh auto auto 46vw;
+    scale: 1.2;
     border:none;
     border-radius: 20px;
+    margin-left: 50%;
+    padding: 3px;
 }
 
 #borrar:hover{
-    scale: 1.5;
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
+    cursor: pointer;    
+    color: #cfc;
+    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
 }
 
 #borrar:active{
     background-color: rgba(0, 0, 0, 0);
 }
 
+/*ESTE ES INGRESAR TEXTO*/
+
+#secText{
+    grid-area: ingresar;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#secText label{
+    box-sizing: border-box;
+    color: #fc0;
+    font-size: .4em;
+    text-align: center;
+    background-color: #111;
+    border: 2px solid #444;
+    border-radius: 90px;
+    padding: 5px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#ingTextAqui{
+    box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
+    text-align: center;
+    color: #00ff00;
+    font-size: .7em;
+    padding: .5em;
+    margin: 0 auto;
+    width: 90%;
+    height: 50%;
+    background-color:rgba(0, 0, 0,.7);
+    border: 2px solid #0f0;
+}
+
 /*BOTON DE REPARAR*/
 
 #reparar{
-    visibility:hidden;
     box-sizing: border-box;
+    visibility:hidden;
+    text-align: center;
     color: #00ff00;
+    font-size: .6em;
+    letter-spacing: 3px;
     background-color: rgba(0, 0, 0, .7);
+    border-radius: 10px;
     border: 2px solid #0f0;
-    margin-top: 1%;
+    margin: 0 auto;
+    padding: 0;
+    width: 86%;
 }
 
 #reparar:hover{
-    border: 2px solid #fc0;
+    background-color: black;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 15px #fc0, 0px 0px 10px #fc0, 0px 0px 5px #fc0, inset 0px 0px 5px #fc0, inset 0px 0px 3px #fc0;
+    color: #fff;
+    text-shadow: 0px 0px 15px #fc0, 0px 0px 10px #fc0, 0px 0px 5px #fc0;
     scale: 1;
-    box-shadow: 0px 0px 20px 1px #fc0;
-    color: #fc0;
+}
+
+#reparar:hover .material-symbols-outlined{
+    text-shadow: 0px 0px 15px #fc0, 0px 0px 10px #fc0, 0px 0px 5px #fc0;
+    color: #fff;
 }
 
 #reparar:active{
     background-color:rgba(255, 204, 0,.2);
-    border:2px solid #fc0;
-}
-
-
-/*ESTE ES MI MENSAJE CIFRADO*/
-
-.mensaje textarea{
-    height: 80vh;
-}
-
-.mensaje{
-    margin: 5vh 5vw 5vh 60vw;
-    width: 35vw;
-    position: absolute;
-    box-sizing: border-box;
-}
-
-.crypto{
-    font-family: 'DotGothic16', sans-serif;
-    background-color:rgba(0, 0, 0,.7);
-    color: #00ff00;
-    border: 1px solid #0f0;
-    width: 100%;
-    font-size: .7em;
-    padding: .5em;
-    box-sizing: border-box;
-    display: compact;
-    text-align: center;
-}
-
-/*IMAGEN*/
-
-#imagen{
-    position: absolute;
-    margin: 30vh 15vw 15vh 14vw;
-    opacity: .3;
-    width: 10vw;
-    visibility: visible;
+    border:2px solid #ff0;
 }
 
 /*ESTO SON MIS BOTONES DE ENCRIPTAR*/
+
 .botones{
+    grid-area: btn;
     box-sizing: border-box;
     display: flex;
     flex-wrap: nowrap;
-    width: 50vw;
-    margin: 80vh 45vw auto auto;
-    position: absolute;
-    padding: 1%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .boton{
@@ -200,21 +253,24 @@ h1 a:hover{
     font-size: .6em;
     text-align: center;
     padding: 1%;
-    width: 20vw;
+    width: 40%;
+    height: 60%;
     background-color: rgba(0, 0, 0,.7);
-    margin: 1vh auto auto 8vw;
+    margin: 0;
     border:2px solid #00ff00;
-    transition: .4s all;
+    letter-spacing: 3px;
+    transition: box-shadow 2s, text-shadow 5s, color 5s, border 2s, scale .5s;
+    transition-timing-function: ease;
 }
 
 button:hover{
-    box-shadow: 0px 0px 20px 2px #0f0;
-    color: #0f0;
-    border:2px solid #0f0;
+    color: #fff;
+    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 5px #00ff00, inset 0px 0px 3px #00ff00;
     cursor: pointer;
-    scale: 1.05;
+    scale: 1.1;
     background-color: rgba(0, 0, 0,.7);
-    
 }
 
 button:active{
@@ -222,113 +278,407 @@ button:active{
     border:2px solid #0f0;
 }
 
+/*ESTE ES MI MENSAJE CIFRADO*/
+
+.mensaje{
+    grid-area: mostrar;
+    width: 100%;
+    height: 90%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background:rgba(0, 0, 0,.7);
+    animation: neon 2s infinite alternate;
+}
+
+#msg{
+    box-sizing: border-box;
+    background:none;
+    font-family: 'DotGothic16', sans-serif;
+    text-align: center;
+    font-size: .7em;
+    color: #00ff00;
+    border: none;
+    padding: .5em;
+    width: 100%;
+    min-height: 80%;
+    cursor: default;
+}
+
+@keyframes neon {
+    0%{
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+    }
+    
+    5.9%{
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        filter: brightness(0.7);
+    }
+    
+    6%{
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        filter: brightness(1);
+    }
+    
+    9.9%{
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        filter: brightness(0.9);
+    }
+    
+    10%{
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        filter: brightness(1);
+    }
+    
+    100%{
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        filter: brightness(1);
+    }
+}
+
+/*IMAGEN*/
+
+#imagen{
+    position: absolute;
+    opacity: .4;
+    width: 12vw;
+    height: 12vw;
+    margin: 0% 0% 0% 20px;
+    visibility: visible;
+}
+
 /*AQUI ES LA PARTE DE BONTON DE COPIAR*/
 
 .copiar{
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0,.7);
     font-family: 'DotGothic16', sans-serif;
     color: #00ff00;
     font-size: .6em;
     text-align: center;
     padding: 1%;
-    background-color: rgba(0, 0, 0,.7);
-    margin: 4vh 0 0 0;
+    margin: 0;
     border:2px solid rgb(0, 255, 0);
-    transition: .4s all;
-    width: 100%;
+    transition: box-shadow 2s, text-shadow 1s, color .5s, border .5s, width 1s;
+    transition-timing-function: ease-out;
+    width: 40%;
+    height: 8%;
+}
+
+.copiar:hover{
+    width: 50%;
+    scale: 1;
 }
 
 /*PIE DE PAGINA*/
 
-.pie{
-    text-align: center;
-    width:98%;
+.foot{
+    grid-area: footer;
+    background:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.foot a img{
     background: rgb(0, 0, 0);
-    padding: 2%;
+    height: 1em;
+    width: 1em;
 }
 
-.pie a{
-    text-decoration: none;
-    color: rgba(0, 255, 0, .5);
-    font-size: .4em;
-    transition: .3s all;
+.foot a:hover{
+    transition: all .5s;
+    scale: 1.3;
 }
 
-.pie a:hover{
-    color:#00ff00;
+.foot a:active{
+    background-color: #000;
 }
 
+.foot p{
+    background: rgba(0, 0, 0,.7);
+    padding: 5px;
+    color: #afa;
+    font-size: .6em;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
+    animation: copy .5s infinite alternate;
+}
 
-/*ESTA ES LA VIEWPORT*/
-@media screen and (max-width:912px){
-    #body{
-        font-size: 25px;
+.foot p span{
+    color: #afa;
+    font-size: 1em;
+    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
+    animation: parpadear 1.8s infinite alternate;
+}
+
+.foot p:hover{
+    cursor:default;
+}
+
+@keyframes copy {
+    to{
+        filter: brightness(.9);
     }
+}
+
+@keyframes parpadear{
+    0%{
+        filter:  brightness(.9);
+    }
+
+    9%{
+        filter: brightness(.9);
+    }
+
+    10%{
+        filter: brightness(0);
+    }
+
+    12%{
+        filter: brightness(.9);
+    }
+    
+    20%{
+        filter: brightness(0);
+    }
+    
+    30%{
+        filter: brightness(.9);
+    }
+    
+    100%{
+        filter: brightness(.9);
+    }
+}
+
+/*ESTA ES LA VIEWPORTDE TABLET*/
+@media screen  and (max-width:1024px) and (min-height: 700px){
+
+    #body{
+        font-size: 4vw;
+    }
+    
+    #pagina{
+        height: 150vh;
+        width: 98vw;
+        margin: 0 .8vw;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+    
+        grid-template-areas:"logo logo"
+                            "logo logo"
+                            "ingresar ingresar"
+                            "ingresar ingresar"
+                            "ingresar ingresar"
+                            "ingresar ingresar"
+                            "ingresar ingresar"
+                            "btn btn"
+                            "mostrar mostrar"
+                            "mostrar mostrar"
+                            "mostrar mostrar"
+                            "mostrar mostrar"
+                            "mostrar mostrar"
+                            "footer footer";
+    }
+    
 
     #canvas{
-        width: 100vw;
-        height: 122vh;
-    }
-
-    /*INGRESAR TEXTO*/
-
-    #ingresarTexto{
-        width: 90vw;
-        margin: 20vh 5vw 0 5vw;
-    }
-
-    #ingTextAqui{
-        font-size: 5vw;
-    }
-
-    /*BOTONES DE ENCRIPTADO*/
-    
-    .botones{
-        flex-wrap: wrap;
-        width: 100vw;
-        margin: 47vh 0 0 0;
-    }
-    
-    .boton{
-        margin: 1vh 5vw;
-        width: 90vw;
-        font-size: 3vw;
-    }
-    
-    /*MENSAJE SECRETO*/
-
-    .mensaje{
-        margin: 63vh 6vw 5vh 6vw;
-        width: 88vw;
-    }
-    
-    .mensaje textarea{
-        height: 50vh;
-    }
-
-    .crypto{
-        font-size: 5vw;
-    }
-    
-    /*BOTON DE COPIAR*/
-
-    .copiar{
-        width: 88vw;
-        margin: 2vh 0 1vh 0;
-        font-size: 3vw;
-    }
-    
-    /*IMAGEN*/
-
-    #imagen{
-        margin: 15vh 38vw 5vh 32vw;
-        width: 30%;
-        height: 30%;
+        height: 150vh;
     }
 
     /*BOTON DE BORRAR*/
 
     #borrar{
-        margin: 5.5vh auto 0 89%;
+        margin: 8% 0% 0% 80%;
+        scale: 1.5;
+    }
+    
+    /*INGRESAR TEXTO*/
+    
+    #secText label{
+        font-size: .5em;
+        width: 80%;
+    }
+    
+    #ingTextAqui{
+        font-size: 1.2em;
+    }
+
+    #reparar{
+        font-size: .8em;
+    }
+    
+    #reparar .material-symbols-outlined{
+        scale: 1.4;
+    }
+    
+    /*MENSAJE SECRETO*/
+    
+    .mensaje{
+        height: 100%;
+        width: 90%;
+        margin: 0 5%;
+    }
+    
+    #msg{
+        font-size: 1.2em;
+    }
+    
+    /*BOTON DE COPIAR*/
+    
+    .copiar{
+        height: 10%;
+    }
+    
+    /*IMAGEN*/
+    
+    #imagen{
+        margin: 10% 0% 0% 20px;
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+/*ESTA ES LA VIEWPORT DE CELULAR*/
+@media screen  and (max-width:600px){
+
+    #body {
+        font-size: 4vw;
+    }
+    
+    #pagina{
+        height: 155vh;
+        width: 98vw;
+        margin: 0 .8vw;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        
+        grid-template-areas:"logo logo"
+        "logo logo"
+        "ingresar ingresar"
+        "ingresar ingresar"
+        "ingresar ingresar"
+        "ingresar ingresar"
+        "btn btn"
+        "btn btn"
+        "mostrar mostrar"
+        "mostrar mostrar"
+        "mostrar mostrar"
+        "mostrar mostrar"
+        "mostrar mostrar"
+        "mostrar mostrar"
+        "footer footer"
+        "footer footer";
+    }
+    
+    #canvas{
+        height: 155vh;
+    }
+    
+    /*BOTON DE BORRAR*/
+    
+    #borrar{
+        margin: -20% 0% 0% 80%;
+    }
+    
+    /*INGRESAR TEXTO*/
+    
+    #secText label{
+        font-size: .7em;
+        width: 85%;
+    }
+
+    #ingTextAqui{
+        font-size: 1.2em;
+    }
+
+    #reparar{
+        font-size: .9em;
+    }
+    
+    #reparar .material-symbols-outlined{
+        scale: .9;
+    }
+    
+    /*BOTONES DE ENCRIPTADO*/
+    
+    .botones{
+        flex-direction: column;
+    }
+    
+    .boton{
+        width: 85%;
+        height: 25%;
+        padding: 0%;
+        font-size: .9em;
+    }
+    
+    /*MENSAJE SECRETO*/
+
+    .mensaje{
+        height: 99%;
+        width: 90%;
+        margin: 0 5%;
+    }
+    
+    #msg{
+        font-size: 1.2em;
+    }
+    
+    /*BOTON DE COPIAR*/
+
+    .copiar{
+        height: 90%;
+        margin: 0% 0% 5% 0%;
+        font-size: 1.2em;
+        padding: 0%;
+
+    }
+    
+    /*IMAGEN*/
+
+    #imagen{
+        margin: 0% 0% 0% 20px;
+        width: 40vw;
+        height: 40vw;
+    }
+
+    /*PIE DE PAGINA*/
+
+    .foot{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        margin: 1%;
+    }
+
+    .foot a img{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    
+    .foot a:hover{
+        scale: 1.2;
+    }
+
+    .foot p{
+        font-size: 1.2em;
     }
 }
