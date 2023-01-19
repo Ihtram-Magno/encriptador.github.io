@@ -194,6 +194,7 @@ button:focus-visible{
     height: 50%;
     background-color:rgba(0, 0, 0,.7);
     border: 2px solid #0f0;
+    border-radius: 8px;
 }
 
 /*BOTON DE REPARAR*/

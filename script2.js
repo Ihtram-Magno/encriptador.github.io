@@ -90,13 +90,13 @@ function corregir(){
 
 function encriptar(){
     if(proceder){
-        let texto=ingresarTexto.value
-        texto=texto.replaceAll("e", "enter");
-        texto=texto.replaceAll("i", "imes");
-        texto=texto.replaceAll("a", "ai");
-        texto=texto.replaceAll("o", "ober");
-        texto=texto.replaceAll("u", "ufat");
-        msg.value=texto;
+        let texto = ingresarTexto.value
+        texto = texto.replaceAll("e", "enter");
+        texto = texto.replaceAll("i", "imes");
+        texto = texto.replaceAll("a", "ai");
+        texto = texto.replaceAll("o", "ober");
+        texto = texto.replaceAll("u", "ufat");
+        msg.value = texto;
         if(ingresarTexto.value != ""){
             ocultarImagen();
         }
@@ -110,13 +110,13 @@ function encriptar(){
 
 function desencriptar(){
     if(proceder){
-        let texto=ingresarTexto.value
-        texto=texto.replaceAll("enter", "e");
-        texto=texto.replaceAll("imes", "i");
-        texto=texto.replaceAll("ai", "a");
-        texto=texto.replaceAll("ober", "o");
-        texto=texto.replaceAll("ufat", "u");
-        msg.value=texto;
+        let texto = ingresarTexto.value
+        texto = texto.replaceAll("enter", "e");
+        texto = texto.replaceAll("imes", "i");
+        texto = texto.replaceAll("ai", "a");
+        texto = texto.replaceAll("ober", "o");
+        texto = texto.replaceAll("ufat", "u");
+        msg.value = texto;
         if(ingresarTexto.value != ""){
             ocultarImagen();
         }

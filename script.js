@@ -1,4 +1,5 @@
-//PRUEBA 
+// FONDO RESPONSIVO
+
 var pantalla = document.querySelector("#canvas");
 var W,H;       
 pantalla.height = 2000; 
@@ -6,30 +7,28 @@ pantalla.width = 1800;
 
 function inicializarCanvas(){ 
     if (pantalla && pantalla.getContext) {
-        var ctx = pantalla.getContext("2d");
-        if (ctx) {
+        var pincel = pantalla.getContext("2d");
+        if (pincel) {
             var s = getComputedStyle(pantalla);
             var n = s.width;
             w = pantalla.width = n.split("px")[0]
 
-            var vW = pantalla.width = 2000;
-            var vH = pantalla.height = 1800;
+            var canvasW = pantalla.width = 2000;
+            var canvasH = pantalla.height = 1800;
 
             if(w <= 1024){
-                vW = pantalla.width = 800;
-                vH = pantalla.height = 2000;
+                canvasW = pantalla.width = 800;
+                canvasH = pantalla.height = 2000;
             }
             
             if(w >= 1024){
-                vW = pantalla.width = 2000;
-                vH = pantalla.height = 1800;
+                canvasW = pantalla.width = 2000;
+                canvasH = pantalla.height = 1800;
             }
 
-            W = vW;
-            H = vH;
+            W = canvasW;
+            H = canvasH;
 
-            console.log(W);       
-            console.log(w);       
         }
     }
 }
@@ -41,7 +40,7 @@ setTimeout(function()
 }, 15);
 
 
-//vamo a darle
+// FONDO DE MATRIX
 
 var fondo = 30;
 // OPACIDAD
