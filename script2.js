@@ -135,6 +135,7 @@ function copiar(){
         ingresarTexto.value= msg.value;
         navigator.clipboard.writeText(msg.value);
         estadoNormal();
+        ingresarTexto.select();
     }
     ingresarTexto.focus();
 }
