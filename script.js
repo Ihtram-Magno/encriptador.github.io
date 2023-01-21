@@ -41,14 +41,11 @@ setTimeout(function()
 
 
 // FONDO DE MATRIX
-
 var fondo = 30;
 // OPACIDAD
 var desvanecer = 0.05;
-
 var pincel;
 
-    
 var columnas = [];
 var maxCantidadLetras;
 
@@ -77,7 +74,6 @@ function iniciarMatrix(){
         // AÑADE UNA COLUMNA
         columnas.push(columna);
 
-
     }    
 }    
 
@@ -101,8 +97,6 @@ function letrasRandom(){
         }    
     }    
 }    
-
-    
 
 // FUNCION QUE DA LA SENSACION DE MOVIMIENTO
 function cascada(){    
