@@ -1,9 +1,8 @@
 // FONDO RESPONSIVO
 
 var pantalla = document.querySelector("#canvas");
-var W,H;       
-pantalla.height = 2000; 
-pantalla.width = 1800; 
+var H = pantalla.height = 2000;
+var W = pantalla.width = 1800;
 
 function inicializarCanvas(){ 
     if (pantalla && pantalla.getContext) {
@@ -29,16 +28,11 @@ function inicializarCanvas(){
             W = canvasW;
             H = canvasH;
 
+            console.log(W)
         }
     }
 }
-
-setTimeout(function() 
-{
-    inicializarCanvas();
-    addEventListener("resize", inicializarCanvas);
-}, 15);
-
+addEventListener("resize", inicializarCanvas);
 
 // FONDO DE MATRIX
 var fondo = 30;
