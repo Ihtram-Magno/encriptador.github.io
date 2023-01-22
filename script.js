@@ -32,7 +32,14 @@ function inicializarCanvas(){
         }
     }
 }
-addEventListener("resize", inicializarCanvas);
+
+function recargarPag(){
+    window.location.reload(false);
+}
+
+inicializarCanvas();
+
+addEventListener("resize", recargarPag);
 
 // FONDO DE MATRIX
 var fondo = 30;
