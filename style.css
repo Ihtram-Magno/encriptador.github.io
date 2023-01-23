@@ -2,20 +2,31 @@
     margin: 0;
     padding: 0;
     font-family: 'DotGothic16', sans-serif;
-    color: #00ff00;
-    border: 2px solid #00ff00;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
     border-radius: 15px;
     box-sizing: border-box;
 }
 
+:root{
+    --color-primario: #00ff00;
+    --color-secundario: #000000;
+    --color-SecOpac: #000000b3;
+    --color-terciario: #ffffff;
+    --color-cuarto: #00e696;
+    --color-quinto: #aaffaa;
+    --color-sexto: #beffbe66;
+    --color-error: #ffcc00 ;
+}
+
 ::placeholder {
     text-align: center;
-    color: rgba(190, 255, 190, .4);
+    color: var(--color-sexto);
 }
 
 ::selection{
-    background-color:rgb(0, 230, 150) ;
-    color: #000;
+    background-color:var(--color-cuarto);
+    color: var(--color-secundario);
 
 }
 
@@ -37,9 +48,9 @@ button:focus-visible{
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #000;
+    background-color: var(--color-secundario);
     border-radius: 20px;
-    border: 2px solid #0f0;
+    border: 2px solid var(--color-primario);
 }
 
 /*AQUI INICIA MI BODY*/
@@ -47,7 +58,7 @@ button:focus-visible{
     box-sizing: border-box;
     font-family: 'DotGothic16', sans-serif;
     font-size: 3vw;
-    background-color: #000;
+    background-color: var(--color-secundario);
 }
 
 #pagina{
@@ -77,7 +88,7 @@ button:focus-visible{
 /*ESTE ES MI FONDO*/
 #canvas {
     position: absolute;
-    background-color: #0f0;
+    background-color: var(--color-primario);
     border: none;
     border-radius: 0px;
     width: 99vw;
@@ -96,12 +107,12 @@ button:focus-visible{
 
 .logo h1 a{
     display: inline-block;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--color-SecOpac);
     font-size: 2em;
     padding: .15em .54em .45em .54em;
     text-decoration:none;
     border-radius:180px;
-    border: 3px solid #afa;
+    border: 3px solid var(--color-quinto);
     box-shadow: none;
     animation: logo 4s linear infinite;
 }
@@ -109,9 +120,9 @@ button:focus-visible{
 @keyframes logo{
     0%{
         margin: 5% 0 0 3%;
-        color: #afa;
-        text-shadow: 0px 0px 12px #00ff00, 0px 0px 8px #00ff00, 0px 0px 5px #00ff00;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 10px #00ff00, inset 0px 0px 8px #00ff00;
+        color: var(--color-quinto);
+        text-shadow: 0px 0px 12px var(--color-primario), 0px 0px 8px var(--color-primario), 0px 0px 5px var(--color-primario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 10px var(--color-primario), inset 0px 0px 8px var(--color-primario);
     }
     
     50%{
@@ -124,9 +135,9 @@ button:focus-visible{
     
     100%{
         margin: 5% 0 0 3%;
-        color: #afa;
-        text-shadow: 0px 0px 12px #00ff00, 0px 0px 8px #00ff00, 0px 0px 5px #00ff00;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 10px #00ff00, inset 0px 0px 8px #00ff00;
+        color: var(--color-quinto);
+        text-shadow: 0px 0px 12px var(--color-primario), 0px 0px 8px var(--color-primario), 0px 0px 5px var(--color-primario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 10px var(--color-primario), inset 0px 0px 8px var(--color-primario);
     }
 }
 
@@ -134,9 +145,9 @@ button:focus-visible{
 
 #borrar{
     box-sizing: border-box;
-    background: #000;
+    background: var(--color-secundario);
     position: absolute;
-    color: #00ff00;
+    color: var(--color-primario);
     scale: 1.2;
     border:none;
     border-radius: 20px;
@@ -146,8 +157,8 @@ button:focus-visible{
 
 #borrar:hover{
     cursor: pointer;    
-    color: #cfc;
-    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
+    color: var(--color-quinto);
+    text-shadow: 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), 0px 0px 5px var(--color-primario);
 }
 
 #borrar:active{
@@ -171,7 +182,7 @@ button:focus-visible{
 
 #secText label{
     box-sizing: border-box;
-    color: #fc0;
+    color: var(--color-error);
     font-size: .4em;
     text-align: center;
     background-color: #111;
@@ -186,14 +197,14 @@ button:focus-visible{
     box-sizing: border-box;
     font-family: 'DotGothic16', sans-serif;
     text-align: center;
-    color: #00ff00;
+    color: var(--color-primario);
     font-size: .7em;
     padding: .5em;
     margin: 0 auto;
     width: 90%;
     height: 50%;
-    background-color:rgba(0, 0, 0,.7);
-    border: 2px solid #0f0;
+    background-color:var(--color-SecOpac);
+    border: 2px solid var(--color-primario);
     border-radius: 8px;
 }
 
@@ -203,12 +214,12 @@ button:focus-visible{
     box-sizing: border-box;
     visibility:hidden;
     text-align: center;
-    color: #00ff00;
+    color: var(--color-primario);
     font-size: .6em;
     letter-spacing: 3px;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: var(--color-SecOpac);
     border-radius: 10px;
-    border: 2px solid #0f0;
+    border: 2px solid var(--color-primario);
     margin: 0 auto;
     padding: 0;
     width: 86%;
@@ -216,16 +227,16 @@ button:focus-visible{
 
 #reparar:hover{
     background-color: black;
-    border: 2px solid #fff;
-    box-shadow: 0px 0px 15px #fc0, 0px 0px 10px #fc0, 0px 0px 5px #fc0, inset 0px 0px 5px #fc0, inset 0px 0px 3px #fc0;
-    color: #fff;
-    text-shadow: 0px 0px 15px #fc0, 0px 0px 10px #fc0, 0px 0px 5px #fc0;
+    border: 2px solid var(--color-terciario);
+    box-shadow: 0px 0px 15px var(--color-error), 0px 0px 10px var(--color-error), 0px 0px 5px var(--color-error), inset 0px 0px 5px var(--color-error), inset 0px 0px 3px var(--color-error);
+    color: var(--color-terciario);
+    text-shadow: 0px 0px 15px var(--color-error), 0px 0px 10px var(--color-error), 0px 0px 5px var(--color-error);
     scale: 1;
 }
 
 #reparar:hover .material-symbols-outlined{
-    text-shadow: 0px 0px 15px #fc0, 0px 0px 10px #fc0, 0px 0px 5px #fc0;
-    color: #fff;
+    text-shadow: 0px 0px 15px var(--color-error), 0px 0px 10px var(--color-error), 0px 0px 5px var(--color-error);
+    color: var(--color-terciario);
 }
 
 #reparar:active{
@@ -250,33 +261,33 @@ button:focus-visible{
 .boton{
     box-sizing: border-box;
     font-family: 'DotGothic16', sans-serif;
-    color: #00ff00;
+    color: var(--color-primario);
     font-size: .6em;
     text-align: center;
     padding: 1%;
     width: 40%;
     height: 60%;
-    background-color: rgba(0, 0, 0,.7);
+    background-color: var(--color-SecOpac);
     margin: 0;
-    border:2px solid #00ff00;
+    border:2px solid var(--color-primario);
     letter-spacing: 3px;
     transition: box-shadow 2s, text-shadow 5s, color 5s, border 2s, scale .5s;
     transition-timing-function: ease;
 }
 
 button:hover{
-    color: #fff;
-    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
-    border: 2px solid #fff;
-    box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 5px #00ff00, inset 0px 0px 3px #00ff00;
+    color: var(--color-terciario);
+    text-shadow: 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), 0px 0px 5px var(--color-primario);
+    border: 2px solid var(--color-terciario);
+    box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 5px var(--color-primario), inset 0px 0px 3px var(--color-primario);
     cursor: pointer;
     scale: 1.1;
-    background-color: rgba(0, 0, 0,.7);
+    background-color: var(--color-SecOpac);
 }
 
 button:active{
     background-color:rgba(0, 255, 0,.2);
-    border:2px solid #0f0;
+    border:2px solid var(--color-primario);
 }
 
 /*ESTE ES MI MENSAJE CIFRADO*/
@@ -291,7 +302,7 @@ button:active{
     align-items: center;
     justify-content: center;
     gap: 25px;
-    background:rgba(0, 0, 0,.7);
+    background:var(--color-SecOpac);
     animation: neon 2s infinite alternate;
 }
 
@@ -301,7 +312,7 @@ button:active{
     font-family: 'DotGothic16', sans-serif;
     text-align: center;
     font-size: .7em;
-    color: #00ff00;
+    color: var(--color-primario);
     border: none;
     padding: .5em;
     width: 100%;
@@ -311,37 +322,37 @@ button:active{
 
 @keyframes neon {
     0%{
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        border: 2px solid var(--color-terciario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 15px var(--color-primario), inset 0px 0px 8px var(--color-primario);
     }
     
     5.9%{
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        border: 2px solid var(--color-terciario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 15px var(--color-primario), inset 0px 0px 8px var(--color-primario);
         filter: brightness(0.7);
     }
     
     6%{
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        border: 2px solid var(--color-terciario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 15px var(--color-primario), inset 0px 0px 8px var(--color-primario);
         filter: brightness(1);
     }
     
     9.9%{
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        border: 2px solid var(--color-terciario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 15px var(--color-primario), inset 0px 0px 8px var(--color-primario);
         filter: brightness(0.9);
     }
     
     10%{
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        border: 2px solid var(--color-terciario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 15px var(--color-primario), inset 0px 0px 8px var(--color-primario);
         filter: brightness(1);
     }
     
     100%{
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 25px #00ff00, 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, inset 0px 0px 15px #00ff00, inset 0px 0px 8px #00ff00;
+        border: 2px solid var(--color-terciario);
+        box-shadow: 0px 0px 25px var(--color-primario), 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), inset 0px 0px 15px var(--color-primario), inset 0px 0px 8px var(--color-primario);
         filter: brightness(1);
     }
 }
@@ -361,14 +372,14 @@ button:active{
 
 .copiar{
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0,.7);
+    background-color: var(--color-SecOpac);
     font-family: 'DotGothic16', sans-serif;
-    color: #00ff00;
+    color: var(--color-primario);
     font-size: .6em;
     text-align: center;
     padding: 1%;
     margin: 0;
-    border:2px solid rgb(0, 255, 0);
+    border:2px solid var(--color-primario);
     transition: box-shadow 2s, text-shadow 1s, color .5s, border .5s, width 1s;
     transition-timing-function: ease-out;
     width: 40%;
@@ -393,7 +404,7 @@ button:active{
 }
 
 .foot a img{
-    background: rgb(0, 0, 0);
+    background: var(--color-secundario);
     height: 1em;
     width: 1em;
 }
@@ -404,23 +415,23 @@ button:active{
 }
 
 .foot a:active{
-    background-color: #000;
+    background-color: var(--color-secundario);
 }
 
 .foot p{
-    background: rgba(0, 0, 0,.7);
+    background: var(--color-SecOpac);
     padding: 5px;
-    color: #afa;
+    color: var(--color-quinto);
     font-size: .6em;
     letter-spacing: 3px;
-    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
+    text-shadow: 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), 0px 0px 5px var(--color-primario);
     animation: copy .5s infinite alternate;
 }
 
 .foot p span{
-    color: #afa;
+    color: var(--color-quinto);
     font-size: 1em;
-    text-shadow: 0px 0px 15px #00ff00, 0px 0px 10px #00ff00, 0px 0px 5px #00ff00;
+    text-shadow: 0px 0px 15px var(--color-primario), 0px 0px 10px var(--color-primario), 0px 0px 5px var(--color-primario);
     animation: parpadear 1.8s infinite alternate;
 }
 
