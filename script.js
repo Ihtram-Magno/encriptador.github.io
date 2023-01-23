@@ -34,7 +34,7 @@ function inicializarCanvas(){
 }
 
 function recargarPag(){
-    window.location.reload(false);
+    inicializarCanvas();
 }
 
 inicializarCanvas();
