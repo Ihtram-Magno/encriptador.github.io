@@ -1,14 +1,14 @@
 /*BOTONES Y AREAS DE TEXTO*/
 
-let ingresarTexto = document.getElementById("ingTextAqui");
-let salidaTexto = document.getElementById("msg");
-let btnEncriptar = document.getElementById("btnEncriptar");
-let btnDesencriptar = document.getElementById("btnDesencriptar");
-let btnCopy = document.getElementById("btnCopy");
-let btnReparar = document.querySelector("#reparar");
-let borrar = document.getElementById("borrar");
-let label = document.querySelector("label");
-let imagen = document.getElementById("imagen");
+const ingresarTexto = document.getElementById("ingTextAqui");
+const salidaTexto = document.getElementById("msg");
+const btnEncriptar = document.getElementById("btnEncriptar");
+const btnDesencriptar = document.getElementById("btnDesencriptar");
+const btnCopy = document.getElementById("btnCopy");
+const btnReparar = document.querySelector("#reparar");
+const borrar = document.getElementById("borrar");
+const label = document.querySelector("label");
+const imagen = document.getElementById("imagen");
 
 ingresarTexto.focus();
 
@@ -86,16 +86,19 @@ function corregir(){
     }
 }
 
+// diccionario
+
+const vocal = ["e", "i", "a", "o", "u"];
+const vocalEncriptada = ["enter", "imes", "ai", "ober", "uber"];
+
 /*FUNCION DE ENCRIPTAR*/
 
 function encriptar(){
     if(proceder){
         let texto = ingresarTexto.value
-        texto = texto.replaceAll("e", "enter");
-        texto = texto.replaceAll("i", "imes");
-        texto = texto.replaceAll("a", "ai");
-        texto = texto.replaceAll("o", "ober");
-        texto = texto.replaceAll("u", "ufat");
+        for (let i = 0; i < vocal.length; i++) {
+            texto = texto.replaceAll(vocal[i], vocalEncriptada[i]);
+        }
         msg.value = texto;
         if(ingresarTexto.value != ""){
             ocultarImagen();
@@ -111,11 +114,9 @@ function encriptar(){
 function desencriptar(){
     if(proceder){
         let texto = ingresarTexto.value
-        texto = texto.replaceAll("enter", "e");
-        texto = texto.replaceAll("imes", "i");
-        texto = texto.replaceAll("ai", "a");
-        texto = texto.replaceAll("ober", "o");
-        texto = texto.replaceAll("ufat", "u");
+        for (let i = 0; i < vocal.length; i++) {
+            texto = texto.replaceAll(vocalEncriptada[i], vocal[i]);
+        }
         msg.value = texto;
         if(ingresarTexto.value != ""){
             ocultarImagen();
