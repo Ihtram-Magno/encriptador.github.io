@@ -74,5 +74,6 @@ scan
 ?
 
 input
-reset
+resetoff,device
+
 scan,usb
