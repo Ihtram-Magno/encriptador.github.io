@@ -28,7 +28,9 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
+}unlock
+input
+
 body {
 	line-height: 1;
 }
@@ -71,3 +73,6 @@ scan
 
 ?
 
+input
+reset
+scan,usb
